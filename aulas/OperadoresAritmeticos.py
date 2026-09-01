@@ -22,3 +22,6 @@ print("Divisao dos números: ", divisao)
 print("Resto dos números: ", resto)
 
 
+ll
+
+
