@@ -1,5 +1,5 @@
 
-#Questão 8: Prova Real dos Tipos de Dados
+#***Questão 8: Prova Real dos Tipos de Dados***
 
 nome = str(input("Digite seu nome: "))
 idade = int(input("Digite sua idade: "))

@@ -1,5 +1,5 @@
 
-#Questão 7: O Desconto da Loja
+#***Questão 7: O Desconto da Loja***
 
 valor = float(input("Digite o valor da compra: R$ "))
 desconto = valor * 0.15
