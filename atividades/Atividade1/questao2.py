@@ -1,3 +1,6 @@
+
+#Questão 2: A Média do Semestre
+
 valor = float(input("Digite o valor da compra: R$ "))
 desconto = valor * 0.15
 valor_final = valor - desconto

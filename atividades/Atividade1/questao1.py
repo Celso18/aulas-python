@@ -1,3 +1,6 @@
+
+#Questão 1: A Ordem da Execução
+
 valor = float(input("Digite o valor da compra: R$ "))
 desconto = valor * 0.15
 valor_final = valor - desconto
