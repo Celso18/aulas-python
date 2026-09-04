@@ -12,5 +12,5 @@ else:
 #EXPLICAÇÃO DO CÓDIGO:
 
 #>= 18: O operador >= significa "maior ou igual". Ele garante que quem tem exatamente 18 anos
-# já entre na condição de voto obrigatório.int(input(...)): Como a idade é sempre um número inteiro
+# já entre na condição de voto obrigatório int(input(...)): Como a idade é sempre um número INTEIRO
 # (18, 19, 20...), usamos o int para a conversão.
