@@ -34,7 +34,7 @@ class Produto:
         print(f"Quantidade em estoque: {self.__quantidade_estoque}")
 
 
-meu_produto = Produto("Notebook", 3500.00, 10)
+meu_produto = Produto("Notebook ThinkPad T14", 3500.00, 10)
 
 # Tentativas de alteração direta: criam atributos externos e não alteram os privados.
 meu_produto.__quantidade_estoque = -50
