@@ -1,0 +1,4 @@
+Cliente: Celso
+Produtos:
+carro: R$ 10.00
+TOTAL: R$ 10.00

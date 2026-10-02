@@ -1,5 +1,0 @@
-Cliente: Ana
-Produtos:
-Caderno: R$ 12.50
-Caneta: R$ 3.25
-TOTAL: R$ 15.75

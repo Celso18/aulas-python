@@ -1,0 +1,3 @@
+Celso;Casa;100.00
+Celso;Casa;100.00
+Rodrigo;Terreno;80.00
