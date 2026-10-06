@@ -1,0 +1,31 @@
+
+1;O Jardim das Estrelas;Uma viagem por um jardim onde cada planta guarda uma memória;39.90;12
+2;A Cidade de Papel;Uma jovem arquiteta planeja reconstruir o centro de sua cidade;54.50;18
+3;Receitas de Domingo;Receitas simples para reunir amigos e família ao redor da mesa;42.00;9
+4;O Relógio do Farol;Um faroleiro encontra mensagens misteriosas dentro de um relógio antigo;36.75;7
+5;Pequeno Guia de Astronomia;Introdução prática ao céu noturno e aos planetas;68.90;24
+6;Viagem pelo Brasil;Relatos de uma jornada por paisagens e culturas brasileiras;49.90;14
+7;Código para Iniciantes;Conceitos fundamentais de programação com exemplos práticos;89.00;6
+8;A Floresta Azul;Dois irmãos tentam proteger uma floresta ameaçada;32.50;21
+9;História das Invenções;Uma visão acessível de ideias que transformaram o cotidiano;75.00;11
+10;O Clube dos Inventores;Amigos constroem uma máquina para resolver problemas do bairro;44.90;5
+11;Matemática no Dia a Dia;Aplicações de raciocínio matemático em situações cotidianas;59.90;16
+12;Cartas para o Mar;Correspondências entre uma pescadora e seu avô;28.00;13
+13;Jardins em Apartamentos;Orientações para cultivar plantas em pequenos espaços;47.50;8
+14;O Trem das Nuvens;Uma aventura fantástica a bordo de um trem voador;35.90;19
+15;Introdução à Fotografia;Técnicas essenciais para fotografar com luz natural;82.00;4
+16;Mistério na Biblioteca;Uma bibliotecária investiga o desaparecimento de um manuscrito;41.00;10
+17;Contos da Serra;Narrativas curtas ambientadas em uma pequena cidade serrana;33.90;22
+18;Energia Sustentável;Alternativas renováveis e caminhos para um futuro mais limpo;91.50;3
+19;O Mapa Esquecido;Uma família encontra um mapa que muda seus planos de viagem;38.00;15
+20;Caderno de Desenho;Exercícios para desenvolver observação e criatividade;27.90;27
+21;A Música das Ondas;Uma compositora busca inspiração em uma vila litorânea;46.00;6
+22;Pequenos Cientistas;Experimentos seguros para aprender ciência em casa;52.90;17
+23;O Mercado das Ideias;Uma feira comunitaria aproxima inventores e moradores;31.50;12
+24;Manual de Horta Urbana;Passo a passo para planejar e cuidar de uma horta na cidade;64.00;2
+25;Viagem ao Centro da Terra;Uma exploradora pesquisa cavernas e formações geológicas;57.90;9
+26;Poesia para Recomeçar;Poemas originais sobre mudanças, encontros e esperança;29.90;20
+27;O Enigma do Museu;Visitantes colaboram para desvendar pistas durante uma exposicao;43.50;14
+28;Animais do Cerrado;Um guia ilustrado sobre especies e habitats do cerrado;71.00;5
+29;Financas sem Complicacao;Principios de organizacao financeira para iniciantes;62.90;18
+30;A Ponte de Madeira;Uma comunidade se une para recuperar a ponte que conecta seus bairros;37.00;11

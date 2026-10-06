@@ -1,0 +1,247 @@
+[
+    {
+        "id": 1,
+        "nome": "O Jardim das Estrelas",
+        "descricao": "Uma viagem por um jardim onde cada planta guarda uma memória",
+        "preco": 39.9,
+        "em_estoque": 12
+    },
+    {
+        "id": 2,
+        "nome": "A Cidade de Papel",
+        "descricao": "Uma jovem arquiteta planeja reconstruir o centro de sua cidade",
+        "preco": 54.5,
+        "em_estoque": 18
+    },
+    {
+        "id": 3,
+        "nome": "Receitas de Domingo",
+        "descricao": "Receitas simples para reunir amigos e família ao redor da mesa",
+        "preco": 42.0,
+        "em_estoque": 9
+    },
+    {
+        "id": 4,
+        "nome": "O Relógio do Farol",
+        "descricao": "Um faroleiro encontra mensagens misteriosas dentro de um relógio antigo",
+        "preco": 36.75,
+        "em_estoque": 7
+    },
+    {
+        "id": 5,
+        "nome": "Pequeno Guia de Astronomia",
+        "descricao": "Introdução prática ao céu noturno e aos planetas",
+        "preco": 68.9,
+        "em_estoque": 24
+    },
+    {
+        "id": 6,
+        "nome": "Viagem pelo Brasil",
+        "descricao": "Relatos de uma jornada por paisagens e culturas brasileiras",
+        "preco": 49.9,
+        "em_estoque": 14
+    },
+    {
+        "id": 7,
+        "nome": "Código para Iniciantes",
+        "descricao": "Conceitos fundamentais de programação com exemplos práticos",
+        "preco": 89.0,
+        "em_estoque": 6
+    },
+    {
+        "id": 8,
+        "nome": "A Floresta Azul",
+        "descricao": "Dois irmãos tentam proteger uma floresta ameaçada",
+        "preco": 32.5,
+        "em_estoque": 21
+    },
+    {
+        "id": 9,
+        "nome": "História das Invenções",
+        "descricao": "Uma visão acessível de ideias que transformaram o cotidiano",
+        "preco": 75.0,
+        "em_estoque": 11
+    },
+    {
+        "id": 10,
+        "nome": "O Clube dos Inventores",
+        "descricao": "Amigos constroem uma máquina para resolver problemas do bairro",
+        "preco": 44.9,
+        "em_estoque": 5
+    },
+    {
+        "id": 11,
+        "nome": "Matemática no Dia a Dia",
+        "descricao": "Aplicações de raciocínio matemático em situações cotidianas",
+        "preco": 59.9,
+        "em_estoque": 16
+    },
+    {
+        "id": 12,
+        "nome": "Cartas para o Mar",
+        "descricao": "Correspondências entre uma pescadora e seu avô",
+        "preco": 28.0,
+        "em_estoque": 13
+    },
+    {
+        "id": 13,
+        "nome": "Jardins em Apartamentos",
+        "descricao": "Orientações para cultivar plantas em pequenos espaços",
+        "preco": 47.5,
+        "em_estoque": 8
+    },
+    {
+        "id": 14,
+        "nome": "O Trem das Nuvens",
+        "descricao": "Uma aventura fantástica a bordo de um trem voador",
+        "preco": 35.9,
+        "em_estoque": 19
+    },
+    {
+        "id": 15,
+        "nome": "Introdução à Fotografia",
+        "descricao": "Técnicas essenciais para fotografar com luz natural",
+        "preco": 82.0,
+        "em_estoque": 4
+    },
+    {
+        "id": 16,
+        "nome": "Mistério na Biblioteca",
+        "descricao": "Uma bibliotecária investiga o desaparecimento de um manuscrito",
+        "preco": 41.0,
+        "em_estoque": 10
+    },
+    {
+        "id": 17,
+        "nome": "Contos da Serra",
+        "descricao": "Narrativas curtas ambientadas em uma pequena cidade serrana",
+        "preco": 33.9,
+        "em_estoque": 22
+    },
+    {
+        "id": 18,
+        "nome": "Energia Sustentável",
+        "descricao": "Alternativas renováveis e caminhos para um futuro mais limpo",
+        "preco": 91.5,
+        "em_estoque": 3
+    },
+    {
+        "id": 19,
+        "nome": "O Mapa Esquecido",
+        "descricao": "Uma família encontra um mapa que muda seus planos de viagem",
+        "preco": 38.0,
+        "em_estoque": 15
+    },
+    {
+        "id": 20,
+        "nome": "Caderno de Desenho",
+        "descricao": "Exercícios para desenvolver observação e criatividade",
+        "preco": 27.9,
+        "em_estoque": 27
+    },
+    {
+        "id": 21,
+        "nome": "A Música das Ondas",
+        "descricao": "Uma compositora busca inspiração em uma vila litorânea",
+        "preco": 46.0,
+        "em_estoque": 6
+    },
+    {
+        "id": 22,
+        "nome": "Pequenos Cientistas",
+        "descricao": "Experimentos seguros para aprender ciência em casa",
+        "preco": 52.9,
+        "em_estoque": 17
+    },
+    {
+        "id": 23,
+        "nome": "O Mercado das Ideias",
+        "descricao": "Uma feira comunitaria aproxima inventores e moradores",
+        "preco": 31.5,
+        "em_estoque": 12
+    },
+    {
+        "id": 24,
+        "nome": "Manual de Horta Urbana",
+        "descricao": "Passo a passo para planejar e cuidar de uma horta na cidade",
+        "preco": 64.0,
+        "em_estoque": 2
+    },
+    {
+        "id": 25,
+        "nome": "Viagem ao Centro da Terra",
+        "descricao": "Uma exploradora pesquisa cavernas e formações geológicas",
+        "preco": 57.9,
+        "em_estoque": 9
+    },
+    {
+        "id": 26,
+        "nome": "Poesia para Recomeçar",
+        "descricao": "Poemas originais sobre mudanças, encontros e esperança",
+        "preco": 29.9,
+        "em_estoque": 20
+    },
+    {
+        "id": 27,
+        "nome": "O Enigma do Museu",
+        "descricao": "Visitantes colaboram para desvendar pistas durante uma exposicao",
+        "preco": 43.5,
+        "em_estoque": 14
+    },
+    {
+        "id": 28,
+        "nome": "Animais do Cerrado",
+        "descricao": "Um guia ilustrado sobre especies e habitats do cerrado",
+        "preco": 71.0,
+        "em_estoque": 5
+    },
+    {
+        "id": 29,
+        "nome": "Financas sem Complicacao",
+        "descricao": "Principios de organizacao financeira para iniciantes",
+        "preco": 62.9,
+        "em_estoque": 18
+    },
+    {
+        "id": 30,
+        "nome": "A Ponte de Madeira",
+        "descricao": "Uma comunidade se une para recuperar a ponte que conecta seus bairros",
+        "preco": 37.0,
+        "em_estoque": 11
+    },
+    {
+        "id": 31,
+        "nome": "A Casa das Andorinhas",
+        "descricao": "Uma restauradora descobre a historia de uma casa antiga.",
+        "preco": 45.9,
+        "em_estoque": 8
+    },
+    {
+        "id": 32,
+        "nome": "Caminhos da Montanha",
+        "descricao": "Um grupo de amigos percorre trilhas em busca de um vale.",
+        "preco": 58.0,
+        "em_estoque": 17
+    },
+    {
+        "id": 33,
+        "nome": "O Laboratorio Secreto",
+        "descricao": "Estudantes investigam os equipamentos de um laboratorio.",
+        "preco": 49.5,
+        "em_estoque": 6
+    },
+    {
+        "id": 34,
+        "nome": "Atlas dos Oceanos",
+        "descricao": "Uma introducao aos mares, correntes e vida marinha.",
+        "preco": 96.0,
+        "em_estoque": 10
+    },
+    {
+        "id": 35,
+        "nome": "Uma Janela para o Inverno",
+        "descricao": "Contos sobre encontros inesperados durante uma viagem.",
+        "preco": 34.9,
+        "em_estoque": 22
+    }
+]
