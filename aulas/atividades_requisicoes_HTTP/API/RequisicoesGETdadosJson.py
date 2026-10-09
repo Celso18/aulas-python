@@ -6,7 +6,7 @@ import requests
 
 
 ARQUIVO_HISTORICO = Path(__file__).with_name("historico_pesquisa.json")
-URL_VIACEP = "https://viacep.com.br/ws/01001000/json/"
+URL_VIACEP = "https://viacep.com.br/ws/{cep}/json/"
 
 
 def normalizar_cep(cep_informado):
@@ -17,7 +17,7 @@ def normalizar_cep(cep_informado):
 
 
 def buscar_endereco(cep):
-    resposta = requests.get(URL_VIACEP.format(cep), timeout=10)
+    resposta = requests.get(URL_VIACEP.format(cep=cep), timeout=10)
     resposta.raise_for_status()
     dados = resposta.json()
 
