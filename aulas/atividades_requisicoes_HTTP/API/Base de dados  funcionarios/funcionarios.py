@@ -16,7 +16,6 @@ def campo_vazio(valor):
         isinstance(valor, str) and valor.strip() == ""
     )
 
-
 # Consulta e valida o CEP na API ViaCEP
 def consultar_cep(cep):
     # Remove espaços e hífen do CEP
