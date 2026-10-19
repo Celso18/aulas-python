@@ -1,0 +1,202 @@
+[
+    {
+        "cargo": "Analista de Sistemas",
+        "cep": "70000000",
+        "cidade": "Brasília",
+        "estado": "DF",
+        "id": 1,
+        "nome": "Ana Souza",
+        "salario": 4200.0,
+        "tempoEmpresa": 3
+    },
+    {
+        "cargo": "Desenvolvedor Java",
+        "cep": "01001000",
+        "cidade": "São Paulo",
+        "estado": "SP",
+        "id": 2,
+        "nome": "Bruno Lima",
+        "salario": 5100.0,
+        "tempoEmpresa": 5
+    },
+    {
+        "cargo": "Assistente Administrativo",
+        "cep": "30140071",
+        "cidade": "Belo Horizonte",
+        "estado": "MG",
+        "id": 3,
+        "nome": "Carla Mendes",
+        "salario": 2800.0,
+        "tempoEmpresa": 0
+    },
+    {
+        "cargo": "Técnico de Suporte",
+        "cep": "70745100",
+        "cidade": "Brasília",
+        "estado": "DF",
+        "id": 4,
+        "nome": "Diego Santos",
+        "salario": 3200.0,
+        "tempoEmpresa": 4
+    },
+    {
+        "cargo": "Cientista de Dados",
+        "cep": "40020000",
+        "cidade": "Salvador",
+        "estado": "BA",
+        "id": 5,
+        "nome": "Eduarda Costa",
+        "salario": 6200.0,
+        "tempoEmpresa": 6
+    },
+    {
+        "cargo": "Desenvolvedor Python",
+        "cep": "60000000",
+        "cidade": "Fortaleza",
+        "estado": "CE",
+        "id": 6,
+        "nome": "Felipe Rocha",
+        "salario": 4800.0,
+        "tempoEmpresa": 0
+    },
+    {
+        "cargo": "Gerente de Projetos",
+        "cep": "30140071",
+        "cidade": "Belo Horizonte",
+        "estado": "MG",
+        "id": 7,
+        "nome": "Gabriela Alves",
+        "salario": 7500.0,
+        "tempoEmpresa": 8
+    },
+    {
+        "cargo": "Analista de Redes",
+        "cep": "69005070",
+        "cidade": "Manaus",
+        "estado": "AM",
+        "id": 8,
+        "nome": "Henrique Martins",
+        "salario": 3900.0,
+        "tempoEmpresa": 4
+    },
+    {
+        "cargo": "UX Designer",
+        "cep": "20040002",
+        "cidade": "Rio de Janeiro",
+        "estado": "RJ",
+        "id": 9,
+        "nome": "Isabela Ferreira",
+        "salario": 4300.0,
+        "tempoEmpresa": 0
+    },
+    {
+        "cargo": "Estagiário de TI",
+        "cep": "88010000",
+        "cidade": "Florianópolis",
+        "estado": "SC",
+        "id": 10,
+        "nome": "João Oliveira",
+        "salario": 1500.0,
+        "tempoEmpresa": 1
+    },
+    {
+        "cargo": "Analista Financeiro",
+        "cep": "90010000",
+        "cidade": "Porto Alegre",
+        "estado": "RS",
+        "id": 11,
+        "nome": "Karen Ribeiro",
+        "salario": 3600.0,
+        "tempoEmpresa": 3
+    },
+    {
+        "cargo": "Engenheiro de Software",
+        "cep": "01001000",
+        "cidade": "São Paulo",
+        "estado": "SP",
+        "id": 12,
+        "nome": "Lucas Carvalho",
+        "salario": 6800.0,
+        "tempoEmpresa": 7
+    },
+    {
+        "cargo": "Recursos Humanos",
+        "cep": "64000000",
+        "cidade": "Teresina",
+        "estado": "PI",
+        "id": 13,
+        "nome": "Mariana Gomes",
+        "salario": 3300.0,
+        "tempoEmpresa": 0
+    },
+    {
+        "cargo": "Administrador de Banco de Dados",
+        "cep": "65000000",
+        "cidade": "São Luís",
+        "estado": "MA",
+        "id": 14,
+        "nome": "Nicolas Pereira",
+        "salario": 5900.0,
+        "tempoEmpresa": 5
+    },
+    {
+        "cargo": "Product Owner",
+        "cep": "70745100",
+        "cidade": "Brasília",
+        "estado": "DF",
+        "id": 15,
+        "nome": "Olivia Barros",
+        "salario": 7200.0,
+        "tempoEmpresa": 6
+    },
+    {
+        "cargo": "Desenvolvedor Front-end",
+        "cep": "79000000",
+        "cidade": "Campo Grande",
+        "estado": "MS",
+        "id": 16,
+        "nome": "Pedro Nunes",
+        "salario": 4600.0,
+        "tempoEmpresa": 0
+    },
+    {
+        "cargo": "QA Tester",
+        "cep": "70745100",
+        "cidade": "Brasília",
+        "estado": "DF",
+        "id": 17,
+        "nome": "Quezia Almeida",
+        "salario": 3700.0,
+        "tempoEmpresa": 4
+    },
+    {
+        "cargo": "DevOps",
+        "cep": "69900000",
+        "cidade": "Rio Branco",
+        "estado": "AC",
+        "id": 18,
+        "nome": "Rafael Teixeira",
+        "salario": 6400.0,
+        "tempoEmpresa": 5
+    },
+    {
+        "cargo": "Secretária",
+        "cep": "70745100",
+        "cidade": "Brasília",
+        "estado": "DF",
+        "id": 19,
+        "nome": "Sofia Cardoso",
+        "salario": 2600.0,
+        "tempoEmpresa": 0
+    },
+    {
+        "cargo": "Coordenador de TI",
+        "cep": "66000000",
+        "cidade": "Belém",
+        "estado": "PA",
+        "id": 20,
+        "nome": "Thiago Moreira",
+        "salario": 8000.0,
+        "tempoEmpresa": 9
+    }
+]
