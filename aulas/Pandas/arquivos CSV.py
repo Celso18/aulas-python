@@ -1,41 +1,42 @@
+import csv # COMAND SEPARATED VALUE
 
-import csv #
-from dataclasses import fields
-
-from aulas.manipulando_arquivos.LidandoComJson.SistemaDeGerenciamentoDeEstoque import dados_lidos
-
-#LISTAS
-
-dados_lidos = [
-
+# LISTAS
+dados_lista = [
     ["nome", "idade", "cidade"],
-    ["Celso",25,"Goiânia"],
-    ["Rodrigo",35,"Rio de Janeiro"]
+    ["João", 22, "Luziânia"],
+    ["Italo", 25, "Brasília"]
+]
 
-    #criando e escrevendo um novo arquivo
+#criando e escrevendo um novo arquivo CSV
+with open('dados_da_lista.csv', 'w', encoding="utf-8", newline='') as arquivo:
+    escrita = csv.writer(arquivo)
+    escrita.writerows(dados_lista)
 
-with open("arquivo_da_lista.csv", "w", encoding="utf-8", newline=as arquivo:
-    escrita_csv = csv.writer(arquivo)
-    escrita_csv.writerows(dados_lista)
+print("ARQUIVO ESCRITO COM SUCESSO\n")
 
-print('arquivo_da_lista.csv criado com sucesso!')
-with open('arquivo_da_lista.csv' "w", encoding="utf-8", newline=as arquivo:
-    leitor = csv.wrinter(arquivo)
+with open('dados_da_lista.csv', 'r', encoding="utf8", newline='') as arquivo:
+    # next(arquivo)
+    leitor = csv.reader(arquivo)
     for linha in leitor:
         print(linha)
 
-        print('\n\n')
+print('\n\n')
 
-        dados_dicionario = [
-            {'nome', 'idade', 'cidade'},
-            {'Celso',25 'Brasilia-DF'},
-            {'Rodrigo',35 'Rio de Janeiro'}
+dados_dicionario = [
+    {"nome": "Rafael","idade": 21,"cidade": "Brasília"},
+    {"nome": "Katia","idade": 19,"cidade": "París"}
+]
 
+colunas = ["nome", "idade", "cidade"]
 
-        ]
-colunas = ['nome', 'idade', 'cidade']
+with open("dados_do_dicionario.csv", "w", encoding="utf-8", newline='') as arquivo:
+    escrita = csv.DictWriter(arquivo, fieldnames=colunas)
+    escrita.writeheader()
+    escrita.writerows(dados_dicionario)
 
-with open('dados_do_funcionario.csv', "w", enconding="utf-8", newline=as arquivo:
-    escrtia.csv.writer(arquivo, fields= dados_dicionario)
-    escrita_csv = writerheader()
-    escrita_csv.writerows(dados_lidos)
+with open("dados_do_dicionario.csv", "r", encoding="utf-8", newline='') as arquivo:
+    leitor = csv.DictReader(arquivo)
+    for linha in leitor:
+        print(f"Nome: {linha["nome"]}\n"
+              f"Idade: {linha["idade"]}\n"
+              f"Cidade: {linha["cidade"]}\n")
