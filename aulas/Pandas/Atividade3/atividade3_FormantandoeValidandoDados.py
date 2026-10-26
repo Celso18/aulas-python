@@ -1,74 +1,105 @@
 from pathlib import Path
+import re
 
 import pandas as pd
 
 
-PASTA_ARQUIVOS = Path(__file__).parent
-ARQUIVO_ENTRADA = PASTA_ARQUIVOS / "dados_despadronizados.csv"
-ARQUIVO_SAIDA = PASTA_ARQUIVOS / "dados_padronizados.csv"
+PASTA_ATIVIDADE = Path(__file__).parent
+ARQUIVO_ENTRADA = PASTA_ATIVIDADE / "dados_despadronizados.csv"
+ARQUIVO_SAIDA = PASTA_ATIVIDADE / "dados_padronizados.csv"
 
 
-def formatar_salarios(salarios):
-    salarios = salarios.str.strip().str.replace(r"[^\d,.\-]", "", regex=True)
-    tem_virgula = salarios.str.contains(",", na=False)
-    tem_ponto = salarios.str.contains(r"\.", na=False)
-    virgula_decimal = (
-        tem_virgula
-        & tem_ponto
-        & (salarios.str.rfind(",").fillna(-1) > salarios.str.rfind(".").fillna(-1))
-    )
-    ponto_decimal = tem_virgula & tem_ponto & ~virgula_decimal
+def formatar_cpf(cpf):
+    """Mantém somente os dígitos do CPF."""
+    return cpf.str.replace(r"\D", "", regex=True)
 
-    salarios_limpos = salarios.copy()
-    salarios_limpos.loc[virgula_decimal] = (
-        salarios.loc[virgula_decimal]
-        .str.replace(".", "", regex=False)
-        .str.replace(",", ".", regex=False)
-    )
-    salarios_limpos.loc[ponto_decimal] = salarios.loc[ponto_decimal].str.replace(
-        ",", "", regex=False
-    )
 
-    somente_virgula = tem_virgula & ~tem_ponto
-    virgula_decimal = somente_virgula & salarios.str.contains(r",\d{1,2}$", na=False)
-    virgula_milhar = somente_virgula & ~virgula_decimal
-    salarios_limpos.loc[virgula_decimal] = salarios.loc[virgula_decimal].str.replace(
-        ",", ".", regex=False
+def validar_cpf(cpf):
+    """Valida se o CPF formatado possui exatamente 11 dígitos."""
+    return cpf.str.fullmatch(r"\d{11}", na=False)
+
+
+def formatar_numero(numero):
+    """Padroniza telefones brasileiros no formato (XX) XXXXX-XXXX."""
+    numero_formatado = numero.str.replace(r"\D", "", regex=True)
+    numero_formatado = numero_formatado.str.replace(
+        r"^55(?=\d{10,11}$)", "", regex=True
     )
-    salarios_limpos.loc[virgula_milhar] = salarios.loc[virgula_milhar].str.replace(
-        ",", "", regex=False
+    numero_formatado = numero_formatado.str.replace(
+        r"^(\d{2})(\d{5})(\d{4})$", r"(\1) \2-\3", regex=True
+    )
+    return numero_formatado.str.replace(
+        r"^(\d{2})(\d{4})(\d{4})$", r"(\1) \2-\3", regex=True
     )
 
-    somente_ponto = tem_ponto & ~tem_virgula
-    salarios_limpos.loc[somente_ponto] = salarios.loc[somente_ponto].str.replace(
-        r"\.(?=\d{3}(?:\.|$))", "", regex=True
-    )
 
-    return pd.to_numeric(salarios_limpos, errors="coerce")
+def formatar_salario(salario):
+    """Converte valores brasileiros ou decimais para números reais."""
+
+    def converter(valor):
+        if pd.isna(valor):
+            return pd.NA
+
+        valor = re.sub(r"[^\d,.\-]", "", str(valor))
+        if not valor:
+            return pd.NA
+
+        ultimo_ponto = valor.rfind(".")
+        ultima_virgula = valor.rfind(",")
+        if ultimo_ponto >= 0 and ultima_virgula >= 0:
+            separador_decimal = (
+                "," if ultima_virgula > ultimo_ponto else "."
+            )
+            separador_milhar = (
+                "." if separador_decimal == "," else ","
+            )
+            valor = valor.replace(separador_milhar, "")
+            valor = valor.replace(separador_decimal, ".")
+        elif ultima_virgula >= 0:
+            valor = valor.replace(".", "").replace(",", ".")
+        elif ultimo_ponto >= 0:
+            partes = valor.split(".")
+            if len(partes[-1]) == 3 and len(partes) > 1:
+                valor = "".join(partes)
+
+        try:
+            return float(valor)
+        except ValueError:
+            return pd.NA
+
+    return salario.map(converter).astype("Float64")
+
+
+def carregar_dados():
+    dados = pd.read_csv(
+        ARQUIVO_ENTRADA,
+        dtype={
+            "nome": "string",
+            "cpf": "string",
+            "numero": "string",
+            "salario": "string",
+        },
+    )
+    dados.columns = dados.columns.str.strip()
+    return dados
 
 
 def padronizar_dados(dados):
-    colunas_obrigatorias = {"nome", "cpf", "numero", "salario"}
-    colunas_ausentes = colunas_obrigatorias.difference(dados.columns)
-    if colunas_ausentes:
-        nomes_ausentes = ", ".join(sorted(colunas_ausentes))
-        raise ValueError(f"Colunas ausentes no arquivo de entrada: {nomes_ausentes}")
-
     dados = dados.copy()
-    dados["cpf_formatado"] = dados["cpf"].str.replace(r"\D", "", regex=True)
-    dados["cpf_valido"] = dados["cpf_formatado"].str.fullmatch(
-        r"\d{11}", na=False
+    dados["cpf_formatado"] = formatar_cpf(dados["cpf"])
+    dados["cpf_valido"] = validar_cpf(dados["cpf_formatado"])
+    dados["numero_formatado"] = formatar_numero(dados["numero"])
+    numeros_para_validar = dados["numero"].str.replace(r"\D", "", regex=True)
+    numeros_para_validar = numeros_para_validar.str.replace(
+        r"^55(?=\d{10,11}$)", "", regex=True
     )
-    dados["numero_formatado"] = dados["numero"].str.replace(
-        r"\D", "", regex=True
+    dados["numero_valido"] = numeros_para_validar.str.fullmatch(
+        r"\d{10,11}", na=False
     )
-    dados["numero_valido"] = dados["numero_formatado"].str.fullmatch(
-        r"(?:55)?\d{10,11}", na=False
-    )
-    dados["salario_formatado"] = formatar_salarios(dados["salario"])
-    dados["salario_anual"] = dados["salario_formatado"] * 12
+    dados["salario_formatado"] = formatar_salario(dados["salario"])
+    dados["salario_anual"] = (dados["salario_formatado"] * 12).round(2)
 
-    colunas_saida = [
+    colunas = [
         "nome",
         "cpf",
         "cpf_formatado",
@@ -80,14 +111,22 @@ def padronizar_dados(dados):
         "salario_formatado",
         "salario_anual",
     ]
-    return dados[colunas_saida]
+    return dados[colunas]
 
 
 def main():
-    dados = pd.read_csv(ARQUIVO_ENTRADA, dtype="string")
-    dados_padronizados = padronizar_dados(dados)
-    dados_padronizados.to_csv(ARQUIVO_SAIDA, index=False)
-    print(f"Arquivo padronizado salvo em: {ARQUIVO_SAIDA}")
+    dados_padronizados = padronizar_dados(carregar_dados())
+    dados_padronizados.to_csv(
+        ARQUIVO_SAIDA,
+        index=False,
+        na_rep="",
+        encoding="utf-8-sig",
+    )
+    dados_para_exibir = dados_padronizados.astype(object).where(
+        pd.notna(dados_padronizados), ""
+    )
+    print(dados_para_exibir.to_string(index=False))
+    print(f"\nArquivo gerado: {ARQUIVO_SAIDA}")
 
 
 if __name__ == "__main__":
