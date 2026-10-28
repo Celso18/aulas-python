@@ -1,0 +1,4 @@
+﻿nome,cpf,cpf_formatado,cpf_valido,numero,numero_formatado,numero_valido,salario,salario_formatado,salario_anual
+João de Menezes,12345678978,12345678978,True,# $ *(){,,False,asd asdasdasdvadvas,,
+Victor Sousa,11122233344,11122233344,True,+55 62 12345-1234,(62) 12345-1234,True,"5.000,88",5000.88,60010.56
+Marcelo Oliveira,000 333 333-99,00033333399,True,63 1111-1111,(63) 1111-1111,True,1000.9900,1000.99,12011.88
